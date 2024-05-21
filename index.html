@@ -59,21 +59,21 @@
   <section class="section">
   <div class="container has-text-centered">
     <!-- paper title -->
-    <p class="title is-3"> UltrAvatar: A Realistic Animatable 3D Avatar Diffusion Model with Authenticity Guided Textures </p>
+    <p class="title is-3"> PromptAvatar: Text-Image Prompted Generation of 3D Animatable Avatars </p>
     <!-- publication -->
     <!-- authors -->
-    <p class="title is-5 mt-2"> 
+    <!-- <p class="title is-5 mt-2"> 
       <a href="https://sites.google.com/view/mingyuan-zhou/home" target="_blank">Mingyuan Zhou*</a><sup>1</sup>, 
       <a href="" target="_blank">Rakib Hyder*</a><sup>1</sup>,
       <a href="" target="_blank">Ziwei Xuan</a><sup>1</sup>
       <a href="http://maple-lab.net/gqi/" target="_blank">Guojun Qi</a><sup>1,2</sup>
-    </p>
+    </p> -->
     <!-- affiliations -->
-    <p class="subtitle is-5">   
+    <!-- <p class="subtitle is-5">   
       <th><sup>1</sup>OPPO Seattle Research Center, USA </th>
       <th><sup>2</sup>Westlake University, China </th>
       <th><sup>*</sup> Equal contributions</th>
-    </p>
+    </p> -->
 
 
     <!-- other links -->
@@ -87,12 +87,12 @@
     </div>
     <br>
     <img class="summary-img" src="Imgs/teaser.png" style="width:100%;">
-    <video muted controls autoplay loop> <source src="animations/ani_7.mp4" type="video/mp4"> </video> 
+    <!-- <video muted controls autoplay loop> <source src="animations/ani_7.mp4" type="video/mp4"> </video>  -->
     <!--video  width="100%" loop autoplay muted-->
       <!--source src="animations/open.mp4" type="video/mp4"-->
     <!--/video-->
 
-    <h1 style="text-align:center"><em> UltrAvatar. Our method takes a text prompt or a single image as input to generate realistic and animatable 3D Avatars with PBR textures, compatible with various rendering engines.</em></h3>
+    <!-- <h1 style="text-align:center"><em> UltrAvatar. Our method takes a text prompt or a single image as input to generate realistic and animatable 3D Avatars with PBR textures, compatible with various rendering engines.</em></h3> -->
   </div>
 
   <!-- main container -->
@@ -101,7 +101,9 @@
     <!-- abstract -->
     <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
     <p class="content is-size-6 has-text-left">
-      Recent advances in 3D avatar generation have gained significant attentions. These breakthroughs aim to produce more realistic animatable avatars, narrowing the gap between virtual and real-world experiences. Most of existing works employ Score Distillation Sampling (SDS) loss, combined with a differentiable renderer and text condition, to guide a diffusion model in generating 3D avatars. However, SDS often generates oversmoothed results with few facial details, thereby lacking the diversity compared with ancestral sampling. On the other hand, other works generate 3D avatar from a single image, where the challenges of unwanted lighting effects, perspective views, and inferior image quality make them difficult to reliably reconstruct the 3D face meshes with the aligned complete textures. In this paper, we propose a novel 3D avatar generation approach termed UltrAvatar with enhanced fidelity of geometry, and superior quality of physically based rendering (PBR) textures without unwanted lighting. To this end, the proposed approach presents a diffuse color extraction model and an authenticity guided texture diffusion model. The former removes the unwanted lighting effects to reveal true diffuse colors so that the generated avatars can be rendered under various lighting conditions. The latter follows two gradient-based guidances for generating PBR textures to render diverse face-identity features and details better aligning with 3D mesh geometry. We demonstrate the effectiveness and robustness of the proposed method, outperforming the state-of-the-art methods by a large margin in the experiments.
+      Recently, creating realistic and animatable 3D avatars guided by text or image prompts attracts widespread attention. 
+Current text-to-avatar methods lack support for fine-grained text prompts and diversity, largely due to the absence of datasets that do not have detailed text descriptions of 3D facial information (texture and geometry). On the other hand, image-to-avatar methods typically involve acquiring 3D facial data from the real world using specialized equipment and using generative models to establish relationships between images and 3D faces. However, such data is costly and scarce, leading to limited model generalization capabilities. Furthermore, the text-to-avatar methods primarily utilize the Score Distillation Sampling (SDS) loss or CLIP to establish mappings between text and images or 3D faces, raising concerns about diversity, accuracy, and efficiency. To address these challenges, in this paper, we create a large-scale dataset that has four modalities: fine-grained descriptions of facial attributes, in-the-wild face images, high-quality texture UV-maps, and facial shapes, using images as a medium, leveraging vision-language models and 3D-aware generative adversarial networks (GAN).
+The pipeline for creating this dataset is cost-effective and reproducible. Based on this dataset, we introduce PromptAvatar which comprises a texture diffusion model, supporting multi-condition guidance from text and image prompts, and a geometry diffusion model guided by text prompts. PromptAvatar can generate an accurate and faithful 3D facial UV-map with its geometry in seconds based on a text or image prompt, compatible with existing rendering engines. PromptAvatar effectively establishes mappings from text or images to 3D faces, and extensive qualitative and quantitative experiments demonstrate the superiority of our method over existing approaches in terms of efficiency, diversity, and quality. Our dataset will be publicly released soon.
     </p>
 
 
@@ -136,7 +138,7 @@
       </p>
 
 
-    <table class="table" style="height:100%;width:100%;">
+    <!-- <table class="table" style="height:100%;width:100%;">
       <colgroup>
         <col span="1" style="width: 33%;">
         <col span="1" style="width: 33%;">
@@ -153,9 +155,9 @@
           <th> <video muted controls autoplay loop> <source src="videos_gen/mid_m.mp4" type="video/mp4"> </video> </th>
           <th> <video muted controls autoplay loop> <source src="videos_gen/our_4_n.mp4" type="video/mp4"> </video> </th>
         </tr>
-    </table>
+    </table> -->
 
-    <table class="table" style="height:100%;width:100%;">
+    <!-- <table class="table" style="height:100%;width:100%;">
       <colgroup>
         <col span="1" style="width: 33%;">
         <col span="1" style="width: 33%;">
@@ -172,13 +174,13 @@
           <th> <video muted controls autoplay loop> <source src="videos_gen/our_6.mp4" type="video/mp4"> </video> </th>
           <th> <video muted controls autoplay loop> <source src="videos_gen/our_5_new.mp4" type="video/mp4"> </video> </th>
         </tr>
-    </table>
+    </table> -->
 
     <div class="content has-text-justified">
       <h3 class="title is-4">Relighting Results</h3>
     </div>
    
-    <table class="table" style="height:100%;width:100%;">
+    <!-- <table class="table" style="height:100%;width:100%;">
       <colgroup>
         <col span="1" style="width: 33%;">
         <col span="1" style="width: 33%;">
@@ -196,7 +198,7 @@
           <th> <video muted controls autoplay loop> <source src="videos_relight/our_10.mp4" type="video/mp4"> </video> </th>
         </tr>
 
-    </table>
+    </table> -->
 
 
           
@@ -209,7 +211,7 @@
         <div class="container">
           <div id="results-carousel" class="carousel results-carousel">
             
-            <div class="active dropdown-toggle">
+            <!-- <div class="active dropdown-toggle">
               <th> <img class="image" src="Imgs/leo.png" style="width:80%;"> </th>
               <video poster="" id="img_pearl" autoplay controls muted loop playsinline height="100%">
                 <source src="videos_gen/leo.mp4"
@@ -242,10 +244,10 @@
                 <source src="videos_relight/tom.mp4"
                         type="video/mp4">
               </video>
-            </div>
+            </div> -->
             
                     
-            <div class="active dropdown-toggle">
+            <!-- <div class="active dropdown-toggle">
               <th> <img class="image" src="Imgs/will.png" style="width:80%;"> </th>
               <video poster="" id="img_pearl" autoplay controls muted loop playsinline height="100%">
                 <source src="videos_relight/will.mp4"
@@ -259,8 +261,8 @@
               <video poster="" id="img_pearl" autoplay controls muted loop playsinline height="100%">
                 <source src="videos_relight/zuc.mp4"
                         type="video/mp4">
-              </video>
-            </div>
+              </video> -->
+            <!-- </div> -->
           </div>
         </div>
         <div  class="columns is-centered has-text-centered" style="text-align: center;">  
@@ -279,7 +281,7 @@
         <div class="container">
           <div id="results-carousel" class="carousel results-carousel">
                    
-            <div class="active dropdown-toggle">
+            <!-- <div class="active dropdown-toggle">
               <th> <img class="image" src="Imgs/joker.png" style="width:80%;"> </th>
               <video poster="" id="img_pearl" autoplay controls muted loop playsinline height="100%">
                 <source src="videos_gen/joker.mp4"
@@ -370,7 +372,7 @@
                 <source src="videos_relight/spider.mp4"
                         type="video/mp4">
               </video>
-            </div>
+            </div> -->
             
 
           </div>
@@ -397,11 +399,11 @@
 
 
     <p class="title is-3 mt-5 has-text-centered"> Animation </p>
-    <p class="content has-text-centered is-size-5">
+    <!-- <p class="content has-text-centered is-size-5">
       <video muted controls autoplay loop> <source src="animations/ani_6.mp4" type="video/mp4"> </video> 
       <video muted controls autoplay loop> <source src="animations/res_c.mp4" type="video/mp4"> </video> 
-    </p>
-    <br><br>
+    </p> -->
+    <br><br>  
 
 
     <br><br>

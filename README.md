@@ -1,2 +1,1 @@
-This repository is UltrAvatar Website. 
-https://usrc-sea.github.io/UltrAvatar/
+This repository is PromptAvatar's project page

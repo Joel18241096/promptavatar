@@ -60,14 +60,15 @@
   <div class="container has-text-centered">
     <!-- paper title -->
     <p class="title is-3"> PromptAvatar: Text-Image Prompted Generation of 3D Animatable Avatars </p>
+    <p class="title is-4"> Anonymous NeurIPS Submission Paper ID 3741 Supplementary Material </p>
     <!-- publication -->
     <!-- authors -->
     <!-- <p class="title is-5 mt-2"> 
       <a href="https://sites.google.com/view/mingyuan-zhou/home" target="_blank">Mingyuan Zhou*</a><sup>1</sup>, 
       <a href="" target="_blank">Rakib Hyder*</a><sup>1</sup>,
       <a href="" target="_blank">Ziwei Xuan</a><sup>1</sup>
-      <a href="http://maple-lab.net/gqi/" target="_blank">Guojun Qi</a><sup>1,2</sup>
-    </p> -->
+      <a href="http://maple-lab.net/gqi/" target="_blank">Guojun Qi</a><sup>1,2</sup> -->
+    <!-- </p> --> 
     <!-- affiliations -->
     <!-- <p class="subtitle is-5">   
       <th><sup>1</sup>OPPO Seattle Research Center, USA </th>
@@ -77,16 +78,16 @@
 
 
     <!-- other links -->
-    <div class="is-flex is-justify-content-center">
+    <!-- <div class="is-flex is-justify-content-center">
       <span class="icon-text mx-1">
         <a class="button is-dark" href="https://arxiv.org/abs/2401.11078" role="button" target="_blank"> <span class="icon"> <ion-icon name="document-outline"></ion-icon> </span> <span> Arxiv </span>  </a> 
       </span>
       <span class="icon-text mx-1">
         <a class="button is-dark" href=" " role="button" target="_blank"> <span class="icon"> <ion-icon name="logo-github"></ion-icon> </span> <span> Code </span> </a> 
       </span>
-    </div>
+    </div> -->
     <br>
-    <img class="summary-img" src="Imgs/teaser.png" style="width:100%;">
+    <img class="summary-img" src="Imgs/fig1.png" style="width:100%;">
     <!-- <video muted controls autoplay loop> <source src="animations/ani_7.mp4" type="video/mp4"> </video>  -->
     <!--video  width="100%" loop autoplay muted-->
       <!--source src="animations/open.mp4" type="video/mp4"-->
@@ -108,8 +109,9 @@ The pipeline for creating this dataset is cost-effective and reproducible. Based
 
 
     <p class="title is-3 mt-5 has-text-centered"> Overview </p>
-
-    <img class="summary-img" src="Imgs/overview.png" style="width:100%;">
+    <div style="display: flex; justify-content: center;">
+      <img class="summary-img" src="Imgs/arch1.png" style="width:70%;">
+    </div>
     <br>
     <p class="content is-size-6 has-text-left">
     We first feed a text prompt into a generic diffusion model to produce a face image. Alternatively, the face image can also be directly input into our framework. 
